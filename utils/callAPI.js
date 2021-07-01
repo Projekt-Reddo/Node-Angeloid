@@ -89,6 +89,16 @@ exports.getAnimeInfoById = async (animeId, seasonDataStr) => {
             animeJson.synopsis = "";
         }
 
+        var aired = "";
+        if (animeJson.aired.string != null) {
+            aired = animeJson.aired.string.split(" to ")[0];
+        }
+
+        var studioId = 9;
+        if (animeJson.studios.length != 0) {
+            studioId = animeJson.studios[0].mal_id;
+        }
+
         var anime = new Anime(
             replaceQuote(animeJson.title),
             replaceQuote(animeJson.synopsis),
@@ -98,9 +108,9 @@ exports.getAnimeInfoById = async (animeId, seasonDataStr) => {
             0,
             animeJson.duration,
             animeJson.episodes,
-            animeJson.aired.string.split(" to ")[0],
+            aired,
             animeJson.url,
-            animeJson.studios[0].mal_id,
+            studioId,
             animeJson.genres,
             characters
         );
