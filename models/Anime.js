@@ -1,5 +1,5 @@
 class Anime {
-    constructor(animeName, content, thumbnail, status, trailer, view, episodeDuration, episode, startday, web, studioId, tags, characters) {
+    constructor(animeName, content, thumbnail, status, trailer, view, episodeDuration, episode, startDay, web, studioId, tags, characters) {
         this.animeName = animeName;
         this.content = content;
         this.thumbnail = thumbnail;
@@ -8,7 +8,7 @@ class Anime {
         this.view = view;
         this.episodeDuration = episodeDuration,
         this.episode = episode;
-        this.startday = startday;
+        this.startDay = startDay;
         this.web = web;
         this.studioId = studioId;
         this.tags = tags;

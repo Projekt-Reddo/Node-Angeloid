@@ -10,5 +10,7 @@ const animeController = require('./controllers/animeController');
 
 app.get('/api/anime', animeController.getLater);
 
+app.get('/api/process', animeController.processing);
+
 const port = process.env.PORT || 9000;
 app.listen(port, () => console.log(`Listening on port ${port}`));
